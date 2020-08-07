@@ -1,4 +1,8 @@
 {
-  "editor.tabSize": 2,
-  "editor.fontFamily": "Hack"
+	"editor.tabSize": 3,
+	"editor.fontFamily": "Hack",
+	"editor.detectIndentation": false,
+
+	"prettier.tabWidth": 3,
+	"prettier.useTabs": true
 }
