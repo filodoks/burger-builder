@@ -4,13 +4,17 @@ import Logo from "../../Logo/Logo";
 import NavigationItems from "../NavigationItems/NavigationItems";
 import classes from "./SideDrawer.css";
 import Backdrop from "../../UI/Backdrop/Backdrop";
-import Aux from "../../../hoc/Auxiliary";
+import Aux from "../../../hoc/Auxiliary/Auxiliary";
 
 const sideDrawer = (props) => {
+	let attachedClasses = [classes.SideDrawer, classes.Close];
+	if (props.open) {
+		attachedClasses = [classes.SideDrawer, classes.Open];
+	}
 	return (
 		<Aux>
-			<Backdrop show />
-			<div className={classes.SideDrawer}>
+			<Backdrop show={props.open} clicked={props.closed} />
+			<div className={attachedClasses.join(" ")}>
 				<div className={classes.Logo}>
 					<Logo />
 				</div>
@@ -23,5 +27,3 @@ const sideDrawer = (props) => {
 };
 
 export default sideDrawer;
-
-//32. Reusing the Backdrop 3:20
