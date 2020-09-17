@@ -32,11 +32,11 @@ const app = (
 	<Provider store={store}>
 		<BrowserRouter>
 			<App />
-		</BrowserRouter>{" "}
+		</BrowserRouter>
 	</Provider>
 );
 
 ReactDOM.render(app, document.getElementById("root"));
 registerServiceWorker();
 
-// 20. Testing
+// https://react-my-burger-b187f.firebaseapp.com/
